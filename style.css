@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+h1{
+   /* width:150px;*/
+    font:bold;
+}
+
+.navbar{
+    width:100%;
+    height:80px;
+    margin:auto;
+    background: white;
+    padding:35px 0;
+    display:flex;
+    align-items: center;
+    position:sticky;
+    justify-content: center;
+    font-size: 1.2rem;
+    top:0;
+    z-index: 1000;
+
+}
+
+.navbar_container{
+display:flex;
+justify-content: space-between;
+height:80px;
+z-index:1;
+width: 100%;
+max-width:1300px;
+margin: 0 auto;
+padding: 0 50px;
+
+}
+
+#navbar_logo{
+    color:BLACK;
+    background-size: 100%;
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    text-decoration: none;
+    font-size:2rem;
+}
+
+.navbar_menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+}
+.navbar_item {
+    height:80px;
+}
+
+.navbar_links{
+    color:red;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:125px;
+    text-decoration: none;
+    height:100%;
+}
+.navbar_links:hover{
+    color:palevioletred;
+    transition: all 0.3s ease;
+}
+
+/*.navbar ul {
+    list-style: none;
+    display:flex;
+    padding-right: 50px;
+}
+
+.navbar ul li {
+    list-style:none;
+    display:inline-block;
+    margin:0 20px;
+    position:relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font:bold;
+    text-transform: uppercase;
+    float:right;
+}
+*/
+@media screen and (max-width:960px) {
+    .navbar_container {
+        display:flex;
+        justify-content: space-between;
+        height:80px;
+        z-index: 1;
+        width:100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar_menu{
+        display:grid;
+        grid-template-columns: auto;
+        margin:0;
+        width:100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index:-1;
+
+    }
+    .navbar_menu.active{
+        background-color: black;
+        top:100%;
+        opacity: 1;
+        transition:all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+
+    }
+    #navbar_logo {
+        padding-left:25px;
+
+    }
+    .navbar_toggle .bar{
+        width:25px;
+        height:3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: purple;
+    }
+    .navbar_item{
+        width:100%;
+    }
+    .navbar_links{
+        text-align: center;
+        padding: 2rem;
+        width:100%;
+        display:table;
+    }
+    #mobile-menu{
+        position:absolute;
+        top:20%;
+        right:5%;
+        transform:  translate(5%,20%);
+    }
+    .navbar_toggle .bar{
+        display:block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* CSS style for HERO container */
+.hero_container{
+    width:100%;
+    height:500px;
+}
+
+/* CSS style for image container */
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.image-item{
+    text-align: center;
+}
+.image-text {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    max-width: 80%; /* Limit the width of the text */
+
+}
+.rounded-image {
+    border-radius: 50%;
+    width: 300px; /* Adjust the default width as needed */
+    height: 300px; /* Adjust the default height as needed */
+    object-fit: cover;
+}
+
+.hero img {
+    width: 100%; /* Set the width to 100% for responsiveness */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 450px;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar_menu {
+        font-size: 0.8rem; /* Example: reduce font size for smaller screens */
+    }
+
+    .hero img {
+        max-width: 100%; /* Set maximum width to 100% on smaller screens */
+    }
+    .image-container{
+        flex-direction: column; /* Change the flex-direction to column for small screens */
+    }
+    .image-item {
+        flex: 0 0 100%; /* On small screens, make each image item take up 100% width */
+        padding: 20px;
+    }
+}
+
