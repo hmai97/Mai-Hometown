@@ -10,11 +10,12 @@ h1{
     font:bold;
 }
 
+
 .navbar{
     width:100%;
     height:80px;
     margin:auto;
-    background: white;
+    background:white;
     padding:35px 0;
     display:flex;
     align-items: center;
@@ -23,6 +24,7 @@ h1{
     font-size: 1.2rem;
     top:0;
     z-index: 1000;
+
 
 }
 
@@ -52,7 +54,10 @@ padding: 0 50px;
     display:flex;
     align-items: center;
     list-style: none;
+    
 }
+
+
 .navbar_item {
     height:80px;
 }
@@ -65,33 +70,14 @@ padding: 0 50px;
     width:125px;
     text-decoration: none;
     height:100%;
+    padding: 10px;
 }
 .navbar_links:hover{
     color:palevioletred;
     transition: all 0.3s ease;
 }
 
-/*.navbar ul {
-    list-style: none;
-    display:flex;
-    padding-right: 50px;
-}
-
-.navbar ul li {
-    list-style:none;
-    display:inline-block;
-    margin:0 20px;
-    position:relative;
-}
-.navbar ul li a {
-    text-decoration: none;
-    color: black;
-    font:bold;
-    text-transform: uppercase;
-    float:right;
-}
-*/
-@media screen and (max-width:960px) {
+@media screen and (max-width:1024px) {
     .navbar_container {
         display:flex;
         justify-content: space-between;
@@ -114,7 +100,7 @@ padding: 0 50px;
 
     }
     .navbar_menu.active{
-        background-color: black;
+        background-color:white;
         top:100%;
         opacity: 1;
         transition:all 0.5s ease;
@@ -175,24 +161,46 @@ padding: 0 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 30px;
+    padding: 30px;
+    
 }
 
 .image-item{
     text-align: center;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    width: 300px; /* Set the width of each image-item */
+    height: 350px; /* Set the height of each image-item */
+
 }
+
+.image-item a p{
+    text-align: center;
+}
+
+.image-item a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Optionally, you can add styles for the links when hovered */
+.image-item a:hover {
+    /* Add your desired styles for the hover effect, for example, changing the color */
+    color:darkblue;
+    font:bold;
+}
+
 .image-text {
     margin-top: 10px;
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
     max-width: 80%; /* Limit the width of the text */
-
+    margin:auto;
 }
 .rounded-image {
     border-radius: 50%;
     width: 300px; /* Adjust the default width as needed */
     height: 300px; /* Adjust the default height as needed */
     object-fit: cover;
+    padding:10px;
 }
 
 .hero img {
@@ -201,7 +209,25 @@ padding: 0 50px;
     max-height: 450px;
 }
 
-@media screen and (max-width: 960px) {
+.hero .banner{
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font:bold;
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 12px 24px;
+    cursor: pointer;
+    width:100%;
+}
+
+
+
+@media screen and (max-width: 1024px) {
     .navbar_menu {
         font-size: 0.8rem; /* Example: reduce font size for smaller screens */
     }
@@ -211,10 +237,191 @@ padding: 0 50px;
     }
     .image-container{
         flex-direction: column; /* Change the flex-direction to column for small screens */
+        align-items: center; 
     }
     .image-item {
         flex: 0 0 100%; /* On small screens, make each image item take up 100% width */
         padding: 20px;
+        text-align: center; /* Center the content horizontally */
+    }
+    .rounded-image {
+        width: 80%; /* Adjust the width of rounded images for smaller screens */
+        height: auto; /* Allow the height to adjust according to the width */
+    }
+    
+}
+
+/* This is about content*/
+.about_container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 300px;
+    background-color: lightcyan;
+}
+
+.icon-item {
+    padding: 30px;
+    margin-left: 50px;
+
+}
+
+.icon-item img {
+    width: 200px;
+    height: 200px;
+}
+
+.about-infor {
+    margin: 30px; /* Adjust the margin as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Add some additional styling for the paragraph */
+.about-infor p {
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    color: #333;
+    align-items: center; 
+
+}
+
+@media screen and (max-width: 768px) {
+    /* For screens up to 767px, apply specific styles for smaller screens */
+    .about_container {
+        flex-direction: column; /* Change flex-direction to column for smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .icon-item {
+        order: 2; /* Change order of icon-item to display below text */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Add bottom margin for separation */
+    }
+
+    .about-infor {
+        order: 1; /* Change order of about-infor to display above icon */
+        text-align: center; /* Center text horizontally */
+    }
+
+    .icon-item {
+        display: none;
+    
+    }
+    
+    .icon-item img {
+        display: none;
+    }
+ 
+
+}
+ /* This is footer */
+.footer-container {
+    flex-direction: column; /* Change to column layout on smaller screens */
+
+    display: flex;
+    justify-content: flex-start; /* Use flex-start to align items to the start of the container */
+}
+
+.social-media h2 {
+    margin: 30px;
+    margin-bottom: 10px;
+}
+
+.rights{
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+.rights p {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.social-logo {
+    margin: 10px;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+    .footer-container {
+        margin-bottom: 80px; 
     }
 }
 
+/* THIS is LANDMARK, DISTRICT 1, STREET FOOD PAGE*/
+body.landmark-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.LM-body img{
+    width: 100%;
+   height: 500px;
+}
+
+.img-LM img{
+    width:500px;
+    height: 500px;
+    display: flex;
+    margin-left: 20px;
+}
+
+.img-LM {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.img-info {
+    text-align: left; /* Adjust text alignment as needed */
+    padding: 30px;
+    box-shadow: 0 0 15px rgb(0,0,0,1);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.img-info p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    list-style: 2px;
+
+}
+.img-info ul li{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: darkblue;
+}
+.img-info ul{
+    font-family: monospace;
+    font-size: 22px;
+    list-style-type:none;
+}
+.LM-images{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px;
+}
+.LM-images img {
+    width:400px;
+    height:400px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .LM-images{
+        flex-direction: column; /* Change the flex-direction to column for small screens */
+        align-items: center;
+    }
+}

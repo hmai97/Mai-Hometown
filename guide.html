@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="guideStyle.css" rel="stylesheet"/>
+    <link rel="stylesheeet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+     integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://kit.fontawesome.com/47bf52ceb3.js" crossorigin="anonymous"></script>
+    </head>
+</head>
+<body>
+        <!--Navigation bar-->
+        <nav class="navbar">
+            <div class="navbar_container">
+                <a href="/home.html" id="navbar_logo">Mai's Hometown</a>
+                <div class="navbar_toggle" id="mobile-menu">
+                    <span class="bar"> </span>
+                    <span class="bar"> </span>
+                    <span class="bar"> </span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item"> 
+                        <a href="/home.html" class="navbar_links">
+                            Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<div class="guide-page">
+    <section class="guide-container">
+        <h1> Book a Tour Guide</h1>
+        <br>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label> First Name </label>
+                <input id="firstname" type="text" placeholder="Enter you first name" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <label> Last Name </label>
+                <input id="lastname" type="text" placeholder="Enter you last name" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+
+                <label> Email </label>
+                <input id="email" type="email" placeholder="Enter you email address" required>
+                <div class="error"></div>
+            </div>
+            <div class="input-box-rad">
+                <label>Choose Your Favorite Place: </label>
+                <div>
+                    <input type="radio" id="district-1" name="place" value="District 1" required>
+                    <label for="district-1">District 1</label>
+                </div>
+                <div>
+                    <input type="radio" id="street-market" name="place" value="Street Market" required>
+                    <label for="street-market">Street Food Market</label>
+                </div>
+                <div>
+                    <input type="radio" id="landmark-81" name="place" value="Landmark 81" required>
+                    <label for="landmark-81">Landmark 81</label>
+                </div>
+            </div>
+            <div class="input-box">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="success-message ">
+                Thank you for submitting!
+            </div>
+        </form>
+
+    </section>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
